@@ -39,7 +39,10 @@ public class Jogo {
 		}
 
 		// menu.menuprejogada(jogadoratual, tabuleiro);
-
+		/**
+		 * 
+		 * @throw Criacao do arquivo 
+		 */
 		try {
 			FileReader arq = new FileReader("jogadas4.txt");
 			BufferedReader lerArq = new BufferedReader(arq);

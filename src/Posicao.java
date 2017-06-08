@@ -1,5 +1,12 @@
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author Fred e Pedro
+ * @since 08/06/2017
+ * Classe Posicao, vai guardar a posicao de cada imovel
+ */
+
 public class Posicao {
 	
 	
@@ -8,6 +15,10 @@ public class Posicao {
 	private Integer numeropos;
 	
 
+	/**
+	 * 
+	 * @param Metodo que seta a posicao de cada imovel
+	 */
 	
 	
 	//Criar Posicoes passar quantidade como parametro

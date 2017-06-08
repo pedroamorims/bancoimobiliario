@@ -1,11 +1,23 @@
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author Fred e Pedro
+ * @since 08/06/2017
+ * Classe Imovel  
+ */
+
 public class Imovel {
 	
 	private String nome;
 	private Double valor;
 	private Jogador proprietario;
 	public double taxa;
+	
+	/**
+	 * 
+	 * @return Metodo que seta a posicao de cada imovel
+	 */
 	
 	public boolean setPosicao(Imovel imovel, Integer posicao, ArrayList<Posicao> listaposicao,Tabuleiro tabuleiro ){
 		return true;

@@ -1,5 +1,12 @@
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author Fred e Pedro
+ * @since 08/06/2017
+ * Classe que representa o Jogador  
+ */
+
 public class Jogador {
 	private String nome;
 	private String cor;
@@ -11,7 +18,10 @@ public class Jogador {
 	
 	
 	
-	
+	/**
+	 * 
+	 * Representa os gets e sets 
+	 */
 	
 	
 	public Double getAluguelpago() {
@@ -30,11 +40,23 @@ public class Jogador {
 		this.aluguelrecebido = aluguelrecebido;
 	}
 
+	
+	/**
+	 * 
+	 * @return Representa o jogador jogando o dado 
+	 */
+	
 	public Integer jogardado(){
 		
 		Integer numero = (int) (1 + Math.random() * (6));
 		return numero;
 	}
+	
+	
+	/**
+	 * 
+	 * @param Metodo que compra o imovel 
+	 */
 	
 	public void comprarimovel(Imovel imovel, Jogador jogador){
 		saldo = saldo - imovel.getValor();
@@ -42,6 +64,12 @@ public class Jogador {
 		imovel.setProprietario(jogador);
 		
 	}
+	
+	
+	/**
+	 * 
+	 * @param Metodo que move o jogador 
+	 */
 	
 	public void movejogador(Integer valordado, Tabuleiro tabuleiro){
 		if (posicao + valordado > tabuleiro.quantidadedeposicoes()) {
@@ -55,6 +83,12 @@ public class Jogador {
 		
 	}
 	
+	/**
+	 * 
+	 * @param Metodo que mostra a lista de imoveis por jogador 
+	 */
+	
+	
 	public void mostralista(Jogador jogador){
 		for (int i = 0 ; i<listadeimoveis.size(); i++){
 			if(listadeimoveis.get(i).getProprietario().getNome() == jogador.getNome()){
@@ -62,6 +96,11 @@ public class Jogador {
 			}
 		}
 	}
+	
+	/**
+	 * 
+	 * @param Metodo que cobra o aluguel 
+	 */
 	
 	public void cobraaluguel(Imovel imovel, Jogador devedor){
 		double valorpago = 0.00;

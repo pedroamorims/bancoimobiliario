@@ -2,6 +2,8 @@ package Teste;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Test;
 
 import Negocio.Jogador;
@@ -46,5 +48,16 @@ public class Teste_Jogador {
 		assertEquals(posicao, 2);
 	}
 	
-}	
+    @Test
+	public void teste_Array(){
+    ArrayList<Jogador> lista = new ArrayList<Jogador>();
+
+    Jogador j = new Jogador();
+    lista.add(j);
+    lista.indexOf(j);
+    lista.get(0).getNome(); 
+    lista.size();
+    lista.remove(j);
+    }
+}
 

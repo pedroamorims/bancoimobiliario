@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Fred e Pedro
+ * @since 08/06/2017
+ * Classe que representa o menu do jogo  
+ */
+
 public class Menu {
 	
 	public void menuprejogada(Jogador jogador, Tabuleiro tabuleiro){
@@ -47,6 +54,11 @@ public class Menu {
 		} while (opcao <= 7);
 
 	}
+	
+	/**
+	 * 
+	 * @param Metodo que chama o menu pos jogada.
+	 */
 	
 	public boolean menuposjogada(Jogador jogador, Tabuleiro tabuleiro){
 		Scanner ler = new Scanner(System.in);

@@ -1,10 +1,21 @@
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author Fred e Pedro
+ * @since 08/06/2017
+ * Classe Tabuleiro  
+ */
+
 public class Tabuleiro {
 
 	private boolean temHospital;
 	ArrayList<Posicao> listaposicao = new ArrayList<>();
-
+    
+	/**
+	 * 
+	 * @param Metodo que cria o tabuleiro
+	 */
 	public void criatabuleiro(Integer quantidadedeposicoes) {
 		System.out.println("Criou");
 		Integer posicao;
@@ -21,6 +32,11 @@ public class Tabuleiro {
 
 			else if (estaocupado(posicao)) {
 				i--;
+				
+				/**
+				 * 
+				 * @param Metodo que verifica a posicao e caso as condicoes estejam certas cria um hospital
+				 */	
 			} else if (!isTemHospital()) {
 				System.out.println("Criou Hospital");
 				Hospital hospital = new Hospital();
@@ -56,7 +72,10 @@ public class Tabuleiro {
 
 			}
 			
-
+			/**
+			 * 
+			 * @param Metodo que cria a residencia
+			 */
 			else if (i % 2 == 0 && quantidadecasas < 10) {
 				System.out.println("Criou Residencia");
 				Residencia residencia = new Residencia();
@@ -78,7 +97,10 @@ public class Tabuleiro {
 				quantidadecasas++;
 			
 			}
-
+			/**
+			 * 
+			 * @param Metodo que cria o clube social
+			 */
 			else if (quantidadecasas == 10) {
 				System.out.println("Criou Clubsocial");
 				ClubeSocial clubesocial = new ClubeSocial();
@@ -93,6 +115,11 @@ public class Tabuleiro {
 
 		}
 	}
+	
+	/**
+	 * 
+	 * @return Metodo que mostra se a posicao esta ocupada ou nao 
+	 */
 
 	public boolean estaocupado(Integer posicao) {
 		for (int j = 0; j < listaposicao.size(); j++) {
