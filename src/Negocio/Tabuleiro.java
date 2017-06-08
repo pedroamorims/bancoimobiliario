@@ -32,12 +32,11 @@ public class Tabuleiro {
 				Posicao pos;
 				String quebra[] = linha.split(Pattern.quote(";"));
 				if(numerolinha == 1){
-				//System.out.printf("%s\n", linha);
 				quantidadeposicoes =Integer.parseInt(linha);
 				numerolinha++;
 				}
 				else if(Integer.parseInt(quebra[2]) == 1 || Integer.parseInt(quebra[2]) == 2 ){
-					//System.out.println(quebra[0] + " " + quebra[1] + " " + quebra[2]);
+					
 					posicao = Integer.parseInt(quebra[1]);
 					pos = new Posicao();
 				    pos.setNumeropos(posicao);
@@ -46,7 +45,6 @@ public class Tabuleiro {
 				}
 				
 				else {
-					//System.out.println(quebra[0] + " " + quebra[1] + " " + quebra[2] + " " + quebra[3] + " " + quebra[4] + " " + quebra[5]);
 					
 					switch (Integer.parseInt(quebra[3])) {
 					case 1:

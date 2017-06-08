@@ -7,8 +7,8 @@ public class Jogador {
 	private Double saldo;
 	private ArrayList<Imovel> listadeimoveis = new ArrayList<>();
 	private int posicao;
-	private Double aluguelpago;
-	private Double aluguelrecebido;
+	private Double aluguelpago = 0.0;
+	private Double aluguelrecebido = 0.0;
 	
 	
 	
@@ -66,7 +66,7 @@ public class Jogador {
 	
 	public void cobraaluguel(Imovel imovel, Jogador devedor){
 		double valorpago = 0.00;
-		valorpago = imovel.getValor() * imovel.getTaxa();
+		valorpago = (imovel.getValor() * imovel.getTaxa())/100;
 		devedor.setSaldo(devedor.getSaldo() - valorpago);
 		saldo += valorpago;
 	}

@@ -6,18 +6,18 @@ import Negocio.Tabuleiro;
 
 public class Menu {
 	
-	public void menuprejogada(Jogador jogador, Tabuleiro tabuleiro){
+	public void menuprejogada(Jogador jogador, Tabuleiro tabuleiro, Integer dado,Integer opcaoescolhida){
 		Scanner ler = new Scanner(System.in);
 		Integer opcao;
 		do {
-			System.out.println("Opcoes");
+			/*System.out.println("Opcoes");
 			System.out.println("1. Ver Saldo");
 			System.out.println("2. Jogador Dado");
 			System.out.println("4. Ver Lista de Imoveis");
 			System.out.println("5.Ver Rendimento dos Imoveis Alugados");
 			System.out.println("6. Ver Qual a Posição do Tabuleiro");
-			System.out.println("7. Passar a Vez");
-			opcao = ler.nextInt();
+			System.out.println("7. Passar a Vez");*/
+			opcao = opcaoescolhida;
 			switch (opcao) {
 			case 1:
 				System.out.println(jogador.getSaldo());
@@ -25,8 +25,8 @@ public class Menu {
 				
 			case 2: 
 				Integer valordodado;
-				jogador.jogardado();
-				valordodado = jogador.jogardado();
+				
+				valordodado = dado;
 				System.out.println(jogador.getNome() + " Jogou o dado e tirou " + valordodado);
 				jogador.movejogador(valordodado, tabuleiro);
 				System.out.println(jogador.getNome() + " foi para a posicao " + jogador.getPosicao());
